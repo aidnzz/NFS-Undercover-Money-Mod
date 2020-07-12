@@ -28,7 +28,7 @@ namespace nfs {
     void edit_user_data(Identifier id, uint32_t data) noexcept
     {
         const int32_t store = read_user_data(id);
-        add_user_data(id, -store + data);
+        add_user_data(id, data - store);
     }
 }
 
